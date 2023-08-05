@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Tugas Akhir PBO">
+        <meta name="author" content="Yanuar Nurul Hilal">
+        <title>Simaskam</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/tambahbarang.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/indexstyle.css}">
+        <link rel="icon" th:href="@{/images/logo.png}" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300&display=swap');
+        </style>
+</head>
+
+    <body>
+    <section class="header">
+        <nav>
+            <a th:href="@{/admin}" class="logo"><span class="fName">Si</span>Maskam</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a th:href="@{/admin}">Beranda</a></li>
+                <li><a th:href="@{/barang}">Barang</a></li>
+                <li><a th:href="@{/sumber}">Sumber</a></li>
+                <li><a th:href="@{/aset}">Aset Masuk</a></li>
+                <li><a class ='button' th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </nav>
+    </section>
+
+        <section class="booking">
+            <h1>Form Edit Barang</h1>
+            <p>Silakan untuk mengubah informasi pada barang terkait</p>
+            <div class="wrap">
+
+                <form id="form" method="post" th:object='${barang}' th:action="@{/barang/editbarang/submit}">
+                    <div class="inputBox">
+                        <h3>Nama Barang</h3>
+                        <input th:field='${barang.nama}' id="nama" type="text" placeholder="Nama Barang" required >
+                    </div>
+                    <div class="inputBox">
+                        <h3>Kode Barang</h3>
+                        <input th:field='${barang.kode}' id="kode" type="text" placeholder="Kode Barang" required >
+                    </div>
+                    <div class="inputBox">
+                        <h3>Kategori</h3>
+                        <input th:field='${barang.kategori}' id="kategori" type="text" placeholder="Kode Barang" required >
+                    </div>
+                    <div class="inputBox">
+                        <h3>Jumlah Barang</h3>
+                        <input th:field='${barang.jumlah}' name="jumlah" type="number" min="1" placeholder="Jumlah Barang" required>
+                    </div>
+                    <div class="inputBox">
+                        <h3>Satuan Barang</h3>
+                        <input th:field='${barang.satuan}' name="satuan" type="text" min="1" placeholder="Satuan Barang" required>
+                    </div>
+                    <div class="inputBox">
+                        <h3>Lokasi</h3>
+                        <select th:field='${barang.lokasi}' id="lokasi">
+                            <option value=Dalam Masjid>Dalam Masjid</option>
+                            <option value="Luar Masjid">Luar Masjid</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <h3>Tahun Pengadaan</h3>
+                        <input th:field='${barang.tahun}' id="tahun" type="text" placeholder="Tahun Pengadaan Barang" required >
+                    </div>
+                    <div class="inputBox">
+                        <h3>Status</h3>
+                        <select th:field='${barang.status}' id="status">
+                            <option value=Baik>Baik</option>
+                            <option value="Rusak">Rusak</option>
+                        </select>
+                    </div>
+                    <input th:field="${barang.id}" type="hidden">
+                    <button type="submit" class="btn" style="margin-top: 15px;">Submit</button>
+                </form>
+        </div>
+        </section>
+    <script th:src="@{/js/indexJS.js}"></script>
+</body>
+</html>

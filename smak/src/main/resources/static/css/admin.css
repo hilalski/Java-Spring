@@ -1,0 +1,307 @@
+.welcome{
+    background-color: #181818;
+}
+
+.welcome h1{   
+    font-weight: 700;
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #C0EEF2;
+ }
+
+ .welcome p{   
+   font-weight: 300;
+   font-size: 30px;
+   margin-bottom: 20px;
+   text-align: center;
+   color: #ffffff;
+}
+
+.blok .judul{
+    text-align: center;
+    width: 100%;
+    font-size: 7vh;
+    font-weight: 800;
+    color: #537FE7;
+    margin-bottom: 20px;
+}
+
+.blok #dashboard{
+    background-color: #537FE7;
+}
+
+
+.content {
+    position: relative;
+    margin-top: auto;
+    align-items: center;
+}
+
+.cards {
+    padding: 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 230px;
+    height: 130px;
+    background: #181818;
+    margin: 15px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+.dest h2{
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 40px;
+    color: #181818;
+}
+
+.dest{
+  position: relative;
+  width: 100%;
+  padding: 20px 80px 80px 100px;
+}
+
+
+.dest h2 span{
+  color: #537FE7;
+}
+
+.dest .row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.dest .row .image-wrapper,
+.dest .row .content{
+  position: relative;
+}
+
+.dest .row .image-wrapper{
+  width: 45%;
+}
+
+.dest .row .image-wrapper .image{
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+  box-shadow: 5px 5px 15px 5px #C0EEF2;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.dest .row .image-wrapper:hover img{
+  -webkit-transform: scale(0.90);
+	transform: scale(0.90);
+}
+
+.dest .row .content {
+  width: 50%;
+  margin-top: 0px;
+}
+
+.dest .row .content h3 {
+  padding-top: 0.5em;
+  color: #537FE7;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.dest .row .content p {
+  padding-right: 1.5em;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.box h1 {
+    color: #C0EEF2;
+    font-size: 2.5rem;
+}
+
+.box h3 {
+    color: #ffffff;
+    font-size: 1.7rem;
+}
+
+.icon {
+    color: #ffffff;
+    font-size: 40px;
+}
+
+i:hover{
+    color: #537FE7;
+}
+
+.inputbox{
+    width: 100%;
+    padding: 1rem;
+    border: 0.5rem solid #181818;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    color: #181818;
+    text-transform: none;
+    margin-bottom: 2rem;
+}
+.table-container {
+    max-height: 400px; /* Atur tinggi maksimal sesuai kebutuhan */
+    overflow-y: auto;
+  }
+
+  tr:nth-child(even) td {
+    background-color: #F2F2F2;
+  }
+  
+  tr:nth-child(odd) td {
+    background-color: #dcdbdb; 
+  }
+
+  tr td {
+    transition: background-color 0.05s ease-in; 
+  }
+
+  tr:hover td{
+    background-color: #181818; /* Warna untuk efek saat hover */
+    color: #FFFFFF; /* Warna teks saat hover */
+  }
+
+  tr:hover td a{
+     /* Warna untuk efek saat hover */
+     color: #d4ff00; /* Warna teks saat hover */
+  }
+
+  td a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  table {
+    margin-top: 30px;
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+  }
+
+  th {
+    color: #ffffff;
+    text-align: center;
+    background-color: #537FE7;
+    font-size: 1.8rem; /* Mengubah ukuran font menjadi 1.8rem */
+    border: 0.2rem solid #C0EEF2;
+    padding: 6px;
+    border-collapse: collapse;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  td {
+    font-size: 1.8rem; /* Mengubah ukuran font menjadi 1.8rem */
+    border: 0.2rem solid #C0EEF2;
+    border-collapse: collapse;
+    padding: 4px;
+    background-color: rgb(241, 241, 241);
+    text-align: left;
+    width: auto;
+    color: #181818;
+    text-transform: none;
+    height: auto;
+  }
+
+  td a {
+    color: #da7800;
+    margin: auto 1px;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  
+
+
+
+@media only screen and (max-width: 768px) {
+    section {
+        padding: 1rem;
+    }
+    .welcome h1 {
+        font-size: 35px;
+    }
+
+    .welcome p {
+        font-size: 25px;
+    }
+
+    .blok .judul {
+        font-size: 5vh;
+    }
+
+    .card {
+        width: 180px;
+        height: 100px;
+    }
+
+    .box h1 {
+        font-size: 24px;
+    }
+
+    .box h3 {
+        font-size: 18px;
+    }
+
+    .icon {
+        font-size: 30px;
+    }
+    table {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .utama{
+      font-size: 15px;
+      background: url(../asset/images/rcm.png) no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      z-index: 2;
+    }
+     
+  
+      .dest{
+      padding: 90px 20px;
+    }
+    
+    .dest .row{
+      justify-content: center;
+      flex-direction: column;
+    }
+    
+    .dest .row .image-wrapper,
+    .dest .row .content{
+      width: 100%;
+    }
+    
+    .dest .row .image-wrapper .image{
+      margin-bottom: 20px;
+    }
+    
+    .dest .row .content p {
+      font-size: 15px;
+    }
+  }

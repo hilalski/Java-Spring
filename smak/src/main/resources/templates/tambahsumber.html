@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Tugas Akhir PBO">
+        <meta name="author" content="Yanuar Nurul Hilal">
+        <title>Add | SiMaskam</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/tambahbarang.css}">
+        <link rel="stylesheet" type="text/css" th:href="@{/css/indexstyle.css}">
+        <link rel="icon" th:href="@{/images/logo.png}" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300&display=swap');
+        </style>
+</head>
+
+    <body>
+    <section class="header">
+        <nav>
+            <a th:href="@{/admin}" class="logo"><span class="fName">Si</span>Maskam</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a th:href="@{/admin}">Beranda</a></li>
+                <li><a th:href="@{/barang}">Barang</a></li>
+                <li><a th:href="@{/sumber}">Sumber</a></li>
+                <li><a th:href="@{/aset}">Aset Masuk</a></li>
+                <li><a class ='button' th:href="@{/logout}">Logout</a></li>
+            </ul>
+        </nav>
+    </section>
+
+        <section class="booking">
+            <h1>Form Tambah Sumber</h1>
+            <p>Silakan untuk melengkapi informasi pada sumber barang yang akan ditambahkan</p>
+            <div class="wrap">
+
+                <form id="form" method="post" th:object='${sumber}' th:action="@{/sumber/tambahsumber/submit}">
+                    <div class="inputBox">
+                        <h3>Sumber atau Vendor</h3>
+                        <input th:field='${sumber.vendor}' id="vendor" type="text" placeholder="Nama Sumber atau Vendor" required >
+                    </div>
+                    <div class="inputBox">
+                        <h3>Alamat</h3>
+                        <input th:field='${sumber.alamat}' id="alamat" type="text" placeholder="Alamat Sumber atau Vendor" required >
+                    </div>
+                    <div class="inputBox">
+                        <h3>Nomor Telepon</h3>
+                        <input th:field='${sumber.notelp}' id="notel" type="text" placeholder="Nomor Telepon Sumber atau Vendor" required >
+                    </div>
+                    <button type="submit" class="btn" style="margin-top: 15px;">Submit</button>
+                </form>
+        </div>
+        </section>
+        <script th:src="@{/js/indexJS.js}"></script>
+</body>
+</html>

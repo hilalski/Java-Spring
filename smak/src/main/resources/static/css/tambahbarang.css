@@ -1,0 +1,148 @@
+ .booking h1, .riwayat h1{   
+    font-weight: 700;
+    font-size: 45px;
+    margin-bottom: 20px;
+    text-align: center;
+ }
+
+ .booking p{   
+   font-weight: 300;
+   font-size: 30px;
+   margin-bottom: 20px;
+   text-align: center;
+   color: #537FE7;
+}
+
+ .booking .wrap {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+   }
+   
+   .booking .wrap .image {
+    flex: 1 1 40rem;
+   }
+   
+   .booking .wrap .image img {
+    width: 100%;
+   }
+   
+   .booking .wrap form {
+    flex: 1 1 40rem;
+    padding: 2rem;
+    box-shadow: 0 2rem 2rem rgba(0,0,0,.1);
+    border-radius: 1rem;
+   }
+   
+   .booking .wrap form .inputBox {
+    padding: .5rem 0;
+   }
+   
+   .booking .wrap form .inputBox input, select {
+    width: 100%;
+    padding: 1rem;
+    border: 1rem solid rgba(122, 255, 253, 0.2);
+    border-radius: 1rem;
+    font-size: 1.7rem;
+    color: #181818;
+    text-transform: none;
+   }
+   
+   .booking .wrap form .inputBox h3 {
+    font-size: 2rem;
+    padding: 1rem 0;
+    color: #537FE7;
+   }
+
+   .booking .totalHarga p{
+    font-size: 1rem;
+    padding: 1rem 0;
+    color: #537FE7;
+   }
+
+   .totalHarga{
+      font-size: 2rem;
+      text-align: left;
+      font-weight:500 ;
+      color:#181818;   
+  }
+  #par{
+      font-size: 2rem;
+      text-align: left;
+      font-weight:700; 
+      margin-top: 10px;
+      color:#537FE7;
+  }
+
+  .table-container {
+   max-height: 400px; /* Atur tinggi maksimal sesuai kebutuhan */
+   overflow-y: auto;
+ }
+
+ tr:nth-child(even) td {
+   background-color: #F2F2F2;
+ }
+ 
+ tr:nth-child(odd) td {
+   background-color: #dcdbdb; 
+ }
+
+ tr td {
+   transition: background-color 0.05s ease-in; 
+ }
+
+ tr:hover td {
+   background-color: #181818; /* Warna untuk efek saat hover */
+   color: #FFFFFF; /* Warna teks saat hover */
+ }
+ 
+ 
+ table {
+   width: 100%;
+   table-layout: auto; /* Mengatur lebar kolom tetap */
+   border-collapse: collapse;
+ }
+ 
+ th {
+   color: #ffffff;
+   text-align: center;
+   background-color: #537FE7;
+   font-size: 1.5rem;
+   border: 0.2rem solid #C0EEF2;
+   padding: 6px;
+   border-collapse: collapse;
+   position: sticky;
+   top: 0;
+   z-index: 1; /* Mengatur z-index agar th tampil di atas konten scroll */
+ }
+ 
+ td {
+   font-size: 1.5rem;
+   border: 0.2rem solid #C0EEF2;
+   border-collapse:collapse;
+   padding: 4px;
+   background-color: rgb(241, 241, 241);
+   text-align: left;
+   width: auto;
+   color: #181818;
+   text-transform: none;
+   height: auto;
+ }
+ 
+ td a img {
+   margin: auto 1px;
+   width: 30px;
+   height: 30px;
+ }
+
+   
+
+ @media screen and (max-width: 991px){
+    .booking{
+        width: 100%;
+        padding-top: 0;
+    }
+ }
+

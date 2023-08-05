@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tugas Akhir PBO">
+    <meta name="author" content="Yanuar Nurul Hilal">
+    <title>SiMaskam</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/indexstyle.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/admin.css}">
+    <link rel="icon" th:href="@{/images/logo.png}" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300&display=swap');
+    </style>
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a th:href="@{/admin}" class="logo"><span class="fName">Si</span>Maskam</a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+            <li><a th:href="@{/admin}">Beranda</a></li>
+            <li><a th:href="@{/barang}">Barang</a></li>
+            <li><a th:href="@{/sumber}">Sumber</a></li>
+            <li><a th:href="@{/aset}">Aset Masuk</a></li>
+            <li><a class ='button' th:href="@{/logout}">Logout</a></li>
+        </ul>
+    </nav>
+</section>
+
+
+<section class="welcome">
+    <h1>Sistem Manajemen Aset Masjid Kampus</h1>
+          <p>Selamat datang di Menu Sumber, di sini Anda bisa merinci barang yang terdapat di Masjid Kampus beserta sumbernya.</p><br>
+    <hr>
+</section>
+
+
+<section class="blok" id="pengguna">
+    <div class="judul">Aset</div>
+    <a th:href="@{/aset/tambahaset}" class="btn" style="margin-bottom: 20px;">Tambah Aset</a>
+
+    <div id="tabel_pengguna" class="table-container">
+        <div class="tabel">
+            <table>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nama Barang</th>
+                    <th scope="col">Nama Vendor</th>
+                    <th scope="col">Tanggal dan Waktu Pencatatan</th>
+                    <th scope="col">Aksi</th>
+                </tr>
+                <tr th:each="aset : ${asets}">
+                    <td th:text="${aset.id}"></td>
+                    <td th:text="${aset.barang.nama}"></td>
+                    <td th:text="${aset.sumber.vendor}"></td>
+                    <td th:text="${aset.createdAt}"></td>
+                    <td>
+                        <a th:href="@{/aset/{id}/edit(id=${aset.id})}">Edit</a>
+                        <a>   |   </a>
+                        <a th:href="@{/aset/{asetId}/hapus(asetId=${aset.id})}" method="post">Hapus</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+<script th:src="@{/js/indexJS.js}"></script>
+</body>
+</html>
+

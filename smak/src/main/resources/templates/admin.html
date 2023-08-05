@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tugas Akhir PBO">
+    <meta name="author" content="Yanuar Nurul Hilal">
+    <title>SiMaskam</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/indexstyle.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/admin.css}">
+    <link rel="icon" th:href="@{/images/logo.png}" />
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,300&display=swap');
+    </style>
+</head>
+<body>
+<section class="header">
+    <nav>
+        <a th:href="@{/admin}" class="logo"><span class="fName">Si</span>Maskam</a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+            <li><a th:href="@{/admin}">Beranda</a></li>
+            <li><a th:href="@{/barang}">Barang</a></li>
+            <li><a th:href="@{/sumber}">Sumber</a></li>
+            <li><a th:href="@{/aset}">Aset Masuk</a></li>
+            <li><a class ='button' th:href="@{/logout}">Logout</a></li>
+        </ul>
+    </nav>
+</section>
+
+      <section class="welcome">
+    <h1>Sistem Manajemen Aset Masjid Kampus</h1>
+    <p>Selamat datang di SiMaskam, Aplikasi ini dibuat untuk mengelola aset barang yang terdapat pada Masjid Al Hasanah STIS.</p><br>
+    <p>Pada Aplikasi ini terdapat 3 menu utama: Barang, Sumber, dan Aset Masuk.</p><br>
+
+    <hr>
+</section>
+<section class="dest" id="about">
+    <h2>Tentang <span>Masjid</span></h2>      
+      <div class="row" id="Masjid">
+          <div class="image-wrapper">
+            <img th:src="@{/images/pict.jpg}" width="100" alt="masjid" class="image">
+          </div>
+          <div class="content">
+            <h3>Masjid Al Hasanah</h3>
+            <p>Masjid ini terletak di bagian Tenggara kompleks Kampus Politeknik Statistika STIS. Masjid ini diresmikan pada 26 September 2006 oleh Kepala Badan Pusat Statistik saat itu, yaitu Dr. H. Rusman Heriawan.</p><br>
+            <p>Masjid ini terdiri dari 2 lantai dengan lantai dasar diperuntukkan untuk laki-laki dan lantai 2 untuk perempuan. Untuk ukuran masjid kampus, Masjid Al Hasanah tergolong masjid yang luas. Pada perayaan hari besar Islam, seperti Idul Fitri dan Idul Adha, ataupun ibadah sholat jumat dan sholat fardhu Masjid ini juga dipakai oleh masyarakat umum, sehingga fasilitas yang ada pada masjid ini juga cukup lengkap.</p>
+          </div>
+    </div>
+</section>
+
+<script th:src="@{/js/indexJS.js}"></script>
+</body>
+</html>
+
